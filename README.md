@@ -1,6 +1,6 @@
 ansible-clickhouse
 =========
-[![GitHub tag (latest by date)](https://img.shields.io/badge/tag-1.0.0-blue)
+![GitHub tag (latest by date)](https://img.shields.io/badge/tag-1.0.0-blue)
 
 Роль для установки clickhouse.
 - Установка:
