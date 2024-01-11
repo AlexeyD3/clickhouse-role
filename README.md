@@ -1,5 +1,6 @@
-Role Name
+ansible-clickhouse
 =========
+[![GitHub tag (latest by date)](https://img.shields.io/badge/tag-1.0.0-blue)
 
 Роль для установки clickhouse.
 - Установка:
@@ -16,8 +17,7 @@ Requirements
 
 Role Variables
 --------------
-
-Переменные для установки кредов
+Переменные для установки
 default/main.yml:
 ```yaml
 clickhouse_user: netology
@@ -34,26 +34,28 @@ clickhouse_packages:
   - clickhouse-common-static
 clickhouse_config_path: /etc/clickhouse-server/config.xml
 clickhouse_users_path: /etc/clickhouse-server/users.xml
+
+```
+
+Переменные для имён БД и таблицы:
+vars/main.yml
+```yaml
+tablename: vector_internal_logs
+#table propertes: (message String) ENGINE = MergeTree() ORDER BY tuple()
 ```
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 Example Playbook
 ----------------
-
 ```yaml
 hosts: clickhouse
 roles:
   - role: clickhouse-role
 ```
 
-License
--------
-
-MIT
-
 Author Information
 ------------------
+Alexey Dubrovin
