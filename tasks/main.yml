@@ -48,16 +48,13 @@
     seconds: 5
 # Создание БД для хранения логов
 - name: Create database
-  ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
+  ansible.builtin.command: "clickhouse-client -q 'create database {{ dbname }};'"
   register: create_db
   failed_when: create_db.rc != 0 and create_db.rc !=82
   changed_when: create_db.rc == 0
 # Создание таблицы для хранения логов одной строкой
 - name: Create table for logs
-  ansible.builtin.command: clickhouse-client -q
-                        'CREATE TABLE IF NOT EXISTS  logs.vector_internal_logs (
-                            message String
-                        )
-                        ENGINE = MergeTree()
-                        ORDER BY tuple();'
+  ansible.builtin.command: clickhouse-client -q 'CREATE TABLE {{ dbname }}.{{ tablename }} (message String) ENGINE = MergeTree() ORDER BY tuple();'
   register: create_table
+  failed_when: create_table.rc != 0 and create_table.rc !=57
+  changed_when: create_table.rc == 0
