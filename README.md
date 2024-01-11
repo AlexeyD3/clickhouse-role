@@ -1,9 +1,9 @@
 ansible-clickhouse
 =========
 ![GitHub tag (latest by date)](https://img.shields.io/badge/tag-1.0.0-blue)
-[![Ansible Galaxy Clickhouse](https://img.shields.io/badge/role-AlexeyD3.clickhouse-blue.svg)](https://galaxy.ansible.com/alexeyd3/clickhouse/)
-[![Ansible Galaxy Vector](https://img.shields.io/badge/role-AlexeyD3.vector-yellow.svg)](https://galaxy.ansible.com/alexeyd3/vector/)
-[![Ansible Galaxy Lighthouse](https://img.shields.io/badge/role-AlexeyD3.lighthouse-yellow.svg)](https://galaxy.ansible.com/alexeyd3/lighthouse/)
+[![Ansible Galaxy Clickhouse](https://img.shields.io/badge/role-AlexeyD3.clickhouse-blue.svg)](https://galaxy.ansible.com/AlexeyD3/clickhouse/)
+[![Ansible Galaxy Vector](https://img.shields.io/badge/role-AlexeyD3.vector-yellow.svg)](https://galaxy.ansible.com/AlexeyD3/vector/)
+[![Ansible Galaxy Lighthouse](https://img.shields.io/badge/role-AlexeyD3.lighthouse-yellow.svg)](https://galaxy.ansible.com/AlexeyD3/lighthouse/)
 
 Роль для установки clickhouse.
 - Установка:
